@@ -1,4 +1,4 @@
-const texts = ["Frontend Developer", "Web Designer", "UI/UX Designer", "Logo Designer", "PhotoEditor"]; // Add as many as you want
+const texts = ["Frontend Developer", "Web Designer", "UI/UX Designer", "Logo Designer", "PhotoEditor"]; 
 const typingElement = document.getElementById("typing");
 
 let textIndex = 0;
