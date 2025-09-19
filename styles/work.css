@@ -1,0 +1,88 @@
+.work {
+    background: radial-gradient(400px 400px at 0 0%, var(--panel) 50%, transparent 70%) , var(--bg);
+}
+
+.work-content {
+    padding: 120px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.work h1 {
+    font-size: 2rem;
+    color: var(--main);
+    margin-bottom: 10px;
+}
+
+.work .subtitle {
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 10px 0 20px 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.tags span {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 4px 10px;
+    margin: 3px;
+    font-size: 0.8rem;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons .btn {
+    padding: 6px 112px;
+    background: var(--main);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.buttons .btn:hover {
+    background: #08c;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0,170,255,0.5);
+}

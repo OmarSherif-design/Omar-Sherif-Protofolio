@@ -1,0 +1,184 @@
+.contact {
+    border-top: 4px solid var(--panel);
+    background:
+        radial-gradient(600px 600px at 100% 0, var(--panel) 40%, transparent 20%),
+        radial-gradient(600px 600px at 0 100%, var(--panel) 50%, transparent 20%),
+        var(--bg);
+}
+
+.contact-content {
+    padding: 120px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    color: var(--main);
+    margin-bottom: 10px;
+}
+
+.contact .subtitle {
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #ffffff;
+    resize: none;
+}
+
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #24272e inset;
+    -webkit-text-fill-color: #fff;
+    caret-color: #fff;
+    transition: background-color 9999s ease-in-out 0s;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: var(--main);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #08c;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+    color: #aaa;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+}
+
+.contact-info .contactIcon {
+    font-size: 23px;
+    padding-right: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: center;
+    min-width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--main);
+    border: 3px solid var(--main);
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.contact-info a:hover {
+    color: var(--bg);
+}
+
+.contact-btn-disabled {
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: center;
+    min-width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--main);
+    border: 3px solid var(--main);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.contact-btn-disabled:hover {
+    color: var(--bg);
+}
+
+.contact-btn-disabled::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.contact-btn-disabled:hover::before {
+    width: 100%;
+}
+
+.contact-info a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.contact-info a:hover::before {
+    width: 100%;
+}
