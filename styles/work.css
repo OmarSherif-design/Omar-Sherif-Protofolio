@@ -40,7 +40,7 @@
 }
 
 .project-info {
-    padding: 10px 0 20px 20px;
+    padding: 10px 20px 20px 20px;
     text-align: left;
 }
 
@@ -66,10 +66,14 @@
 
 .buttons {
     margin-top: 15px;
+    display: flex;
+    width: 100%;
 }
 
 .buttons .btn {
-    padding: 6px 112px;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
     background: var(--main);
     color: #fff;
     border-radius: 20px;

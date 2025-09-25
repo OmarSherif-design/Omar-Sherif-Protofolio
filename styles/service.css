@@ -57,12 +57,11 @@
     align-items: center; 
     text-decoration: none;
     font-weight: 600;
+    min-width: max-content;
     color: #fff;
     background: linear-gradient(to right, transparent 10%,transparent 15%,#2b2e4e 40%,#2b2e4e 60%, transparent 90%);
     border-radius: 20px;
-    padding: 15px;
-    padding-right: 400px;
-    padding-left: 400px;
+    padding: 15px 35%;
     gap: 20px;
 }
 
@@ -73,4 +72,36 @@
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 20px rgba(0,170,255,0.5);
+}
+
+@media (max-width: 815px){
+    .services .btn {
+        padding: 15px 30%;
+    }
+}
+
+@media (max-width: 620px){
+    .services .btn {
+        padding: 15px 25%;
+    }
+}
+
+@media (max-width: 500px){
+    .services .btn {
+        padding: 15px 20%;
+    }
+}
+
+@media (max-width: 430px){
+    .services .btn {
+        padding: 15px 15%;
+        background: linear-gradient(to right, transparent 5%,transparent 10%,#2b2e4e 40%,#2b2e4e 60%, transparent 90%);
+    }
+}
+
+@media (max-width: 375px){
+    .services .btn {
+        padding: 15px 10%;
+        background: linear-gradient(to right, transparent 2%,transparent 5%,#2b2e4e 50%,#2b2e4e 70%, transparent 70%);
+    }
 }

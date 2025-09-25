@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .contact-form {
@@ -181,4 +181,43 @@
 
 .contact-info a:hover::before {
     width: 100%;
+}
+
+@media (max-width: 753px) {
+    .contact-content {
+        display: grid;
+        place-items: center;
+        padding: 120px 20px;
+    }
+
+    .contact-container {
+        display: block;
+        flex-wrap: unset;
+    }
+
+    .contact-form {
+        min-width: 500px;
+        padding-bottom: 40px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 535px) {
+    .contact-form {
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        min-width: 380px;
+    }
+}
+@media (max-width: 415px) {
+    .contact-form {
+        min-width: 100%;
+    }
 }

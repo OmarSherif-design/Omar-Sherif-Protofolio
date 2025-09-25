@@ -48,14 +48,14 @@ h1,h2,h3,h4,h5,h6,p{
 
 .header{
     position: fixed;
+    justify-self: center;
     width: 95%;
-    margin:24px 24px 0;
+    margin-top: 24px;
     padding:12px 16px;
-    display:flex;
     align-items:center;
-    justify-content:space-between;
     background:linear-gradient(180deg, rgb(255 255 255 / 0.04), rgb(255 255 255 / 0));
     border:1px solid rgb(255 255 255 / 0.08);
+    flex-direction: row;
     border-radius: 40px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -82,9 +82,13 @@ h1,h2,h3,h4,h5,h6,p{
 
 .navbar {
     margin-right: 20px;
+    width: max-content;
+    transform: translateY(50%);
+    float: right;
 }
 
-.navbar a{
+.navbar a {
+    justify-items: center;
     font-size: 18px;
     color: #ededed;
     text-decoration: none;
@@ -93,12 +97,30 @@ h1,h2,h3,h4,h5,h6,p{
     transition: .3s;
 }
 
-.navbar a:hover, .navbar a.active{
+.navbar a:hover, .navbar a.active {
+    color: var(--main);
+}
+
+.menubar {
+    margin-right: 20px;
+    width: max-content;
+    transform: translateY(50%);
+    float: right;
+}
+
+.menubar .menuicon,.closeicon {
+    font-size: 23px;
+    transition: .3s;
+    display: none;
+}
+
+.menubar .menuicon:hover,.closeicon:hover {
     color: var(--main);
 }
 
 
 .home {
+    background: radial-gradient(1200px 600px at 20% -20%, var(--panel) 20%, transparent 100%) , var(--bg);
     height: 105vh;
     display: flex;
     align-items: center;
@@ -245,9 +267,8 @@ h1,h2,h3,h4,h5,h6,p{
 .animationImg{
     position: absolute;
     display: flex;
-    justify-content: flex-end; 
-    width: 90%;               
-    margin-top: -130px; 
+    justify-content: flex-end;
+    width: 90%; 
 }
 
 #typing {
@@ -277,39 +298,127 @@ h1,h2,h3,h4,h5,h6,p{
 
 
 @media (max-width: 980px){
-    .navbar div{
+    .menubar .menuicon{
         display: block;
     }
 
-    .navbar span {
+    .menubar .closeicon{
+        display: none;
+    }
+    
+   .menubar.open .menuicon{
+        display: none;
+   }
+
+   .menubar.open .closeicon{
+        display: block;
+   }
+
+   .menuicons{
+        display: inline;
+        color: #1B1B1B;
+        transition: all .50s ease;
+   }
+
+
+    .iconlink:hover{
+        filter: drop-shadow(0 6px 5px #ffb210);
+        transform: translateY(5px);
+    }
+
+    .navbar{
+        float: left;
+    }
+
+    .navbar {
         position: absolute;
         top: 100%;
         right: -500%;
-        width: 130px;
-        height: 175px;
-        margin-top: 10px;
-        padding-top: 20px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         justify-content: flex-start;
-        background-color: #ffffff;
-        flex-direction: column;
-        align-items: flex-start; 
-        justify-content: flex-start; 
-        text-align: left; 
-        padding-left: 20px;  
+        background-color: var(--muted);
+        flex-direction: column;  
         border-radius: 20px;
         transition: all .40s ease;
     }
-
-    .navbar span a {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 5px;
+    .navbar a {
+        padding: 5px 20px;
+        width: 100%;
         color: var(--bg);
+        font-weight: bold;
+        transition: all 0.5s ease;
     }
 
-    .navbar span.open{
+    .navbar.open{
         right: 2%;
+    }
+}
+
+@media (max-width: 635px){
+    .home-content h1{
+        font-size: 40px;
+    }
+
+    .home-content h3{
+        font-size: 23px;
+    }
+
+    .home-content p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .animationImg{
+        margin-top: -380px;
+    }
+
+    .home-content{
+        padding-top: 150px;
+    }
+
+    .home-content h1{
+        font-size: 37px;
+        text-align: center;
+    }
+
+    .home-content h3{
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .home-content p{
+        font-size: 12px;
+        text-align: center;
+    }
+    .home-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-sci{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 420px){
+    .home-content h1{
+        font-size: 33px;
+    }
+
+    .home-content h3{
+        font-size: 17px;
+    }
+
+    .home-content p{
+        font-size: 12px;
     }
 }
