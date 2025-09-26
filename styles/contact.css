@@ -213,11 +213,30 @@
 
 @media (max-width: 480px) {
     .contact-form {
-        min-width: 380px;
+        width: 100%;
+        min-width: auto;
+        max-width: 380px;
     }
 }
 @media (max-width: 415px) {
     .contact-form {
-        min-width: 100%;
+        width: 100%;
+        min-width: auto;
+        max-width: 100%;
     }
+}
+
+@media (max-width: 382px) {
+    .contact-form {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .contact-info a {
+        align-items: center;
+        min-width: auto;
+        width: 280px;
+    }
+
+
 }
