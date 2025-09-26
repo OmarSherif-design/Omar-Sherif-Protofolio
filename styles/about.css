@@ -161,3 +161,9 @@
         width: fit-content;
     }
 }
+
+@media (max-width: 383px){
+    .about-text h1 {
+        width: 100%;
+    }
+}
