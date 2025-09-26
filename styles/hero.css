@@ -333,14 +333,14 @@ h1,h2,h3,h4,h5,h6,p{
 
     .navbar {
         position: absolute;
-        top: 100%;
+        top: 0;
         right: -500%;
         padding: 10px;
-        margin-top: 20px;
+        margin-top: 0;
         margin-right: 0px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 0px;
         justify-content: flex-start;
         background-color: var(--muted);
         flex-direction: column;  
@@ -349,6 +349,7 @@ h1,h2,h3,h4,h5,h6,p{
     }
     .navbar a {
         padding: 5px 20px;
+        margin-bottom: 5px;
         width: 100%;
         color: var(--bg);
         font-weight: bold;
