@@ -102,6 +102,6 @@
 @media (max-width: 375px){
     .services .btn {
         padding: 15px 10%;
-        background: linear-gradient(to right, transparent 2%,transparent 5%,#2b2e4e 50%,#2b2e4e 70%, transparent 70%);
+        background: linear-gradient(to right, transparent 2%,transparent 5%,#2b2e4e 50%,#2b2e4e 70%, transparent 90%);
     }
 }
