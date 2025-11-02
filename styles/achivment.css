@@ -66,3 +66,25 @@
     transform: translateY(-8px);
     box-shadow: 0 0 20px rgba(0,170,255,0.5);
 }
+
+
+.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  margin-top: 30px;
+  background: var(--main);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.show-more-btn:hover {
+  background: #00aaff;
+  transform: scale(1.05);
+}
