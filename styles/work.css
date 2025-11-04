@@ -234,6 +234,11 @@
 }
 @media (max-width: 440px) {
     .work-wrapper {
-        max-width: 80%;
+        max-width: 95%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1rem;
     }
 }
