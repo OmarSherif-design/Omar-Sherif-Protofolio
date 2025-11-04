@@ -233,6 +233,10 @@
     }
 }
 @media (max-width: 440px) {
+    .work {
+        padding-top: 55px;
+    }
+
     .work-wrapper {
         max-width: 95%;
     }
