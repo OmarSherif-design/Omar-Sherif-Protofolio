@@ -118,6 +118,28 @@ h1,h2,h3,h4,h5,h6,p{
     color: var(--main);
 }
 
+.header,
+.header .logo,
+.header .navbar a,
+.header .menubar .menuicon,
+.header .menubar .closeicon {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.header.light {
+  background: rgba(130, 170, 223, 0.454);
+}
+
+.header.light .logo,
+.header.light .navbar a{
+    color: #111;
+}
+
+.header.light .navbar a:hover,
+.header.light .navbar a.active {
+  color: var(--main);
+  font-weight: 600;
+}
 
 .home {
     background: radial-gradient(1200px 600px at 20% -20%, var(--panel) 20%, transparent 100%) , var(--bg);

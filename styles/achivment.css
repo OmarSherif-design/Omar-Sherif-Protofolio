@@ -56,15 +56,10 @@
 }
 
 .certificate-card a {
-    cursor: default;
+    cursor: pointer;
     color: var(--main);
     text-decoration: none;
     font-weight: 600;
-}
-
-.certificate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(0,170,255,0.5);
 }
 
 

@@ -129,11 +129,6 @@
     margin-bottom: 10px;
 }
 
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
-}
-
 @media (max-width: 775px){
     .container {
         flex-direction: column;
