@@ -3,8 +3,6 @@ let isDragging = false;
 let startX;
 let scrollStart;
 
-const speed = window.innerWidth < 768 ? 0.4 : 1;
-
 container.addEventListener('mousedown', (e) => {
   isDragging = true;
   container.classList.add('dragging');
@@ -26,6 +24,6 @@ container.addEventListener('mousemove', (e) => {
   if (!isDragging) return;
   e.preventDefault();
   const x = e.pageX - container.offsetLeft;
-  const walk = (x - startX) * speed;
+  const walk = (x - startX);
   container.scrollLeft = scrollStart - walk;
 });
