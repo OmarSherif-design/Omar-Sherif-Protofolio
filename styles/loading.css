@@ -56,6 +56,9 @@ header {
   font-weight: bold;
   color: #e6e7ee;
   letter-spacing: 2px;
+  user-select: none; 
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
 }
 
 .loading-text span {
