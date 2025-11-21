@@ -1,3 +1,8 @@
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 header {
   opacity: 0;
   pointer-events: none;
@@ -16,54 +21,31 @@ header {
   transition: opacity 0.7s ease;
 }
 
-
-.loader {
-  width: 100px;
-  height: 100px;
-  transform: rotate(45deg);
-  background: linear-gradient(0deg, #00abf0, #000);
-  border-radius: 20px;
-  position: relative;
-  padding: 5px;
-  overflow: hidden;
+.loader .path {
+  fill: none;
+  stroke: var(--main);
+  stroke-width: 10;
+  stroke-linecap: round;
+  animation: rotate 2.2s linear infinite, dash 2.2s ease-in-out infinite;
+  transform-origin: center;
 }
 
-
-.loader::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  background: #0f1430;
-  border-radius: 15px;
-  z-index: 999999999999999999999999999999;
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
 }
 
-.loader::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 5px;
-  background: conic-gradient(
-    from 0deg,
-    #0f1430 0deg 180deg,
-    #0f1430 90deg 360deg
-  );
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: borderRotate 2s linear infinite;
-  z-index: 99999999999999999999999999999;
-}
-
-@keyframes borderRotate {
+@keyframes dash {
   0% {
-    transform: rotate(0deg);
+    stroke-dasharray: 1, 300;   /* بداية: القوس صغير جداً */
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 140, 300; /* يبقى نص دائرة */
+    stroke-dashoffset: -60;     /* يتحرك خلال الدوران */
   }
   100% {
-    transform: rotate(360deg);
+    stroke-dasharray: 1, 300;   /* يرجع صغير تاني */
+    stroke-dashoffset: -300;
   }
 }
 
