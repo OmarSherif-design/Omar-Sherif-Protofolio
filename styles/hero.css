@@ -64,20 +64,22 @@ h1,h2,h3,h4,h5,h6,p{
 
 .logo{
     margin-left: 20px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     position: relative;
     font-size: 20px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
-    width: 170px;
+    width: 200px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .logo img {
-    width: 40px;
+    width: 60px;
 }
 
 .navbar {

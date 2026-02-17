@@ -10,7 +10,7 @@
     border-top: 1px solid rgba(255,255,255,0.04);
     background: linear-gradient(180deg, rgba(11,14,22,0.6), rgba(11,14,22,0.9));
     color: var(--text);
-    padding: 48px 20px 24px;
+    padding: 48px 26px 24px;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
@@ -27,14 +27,16 @@
     display: flex;
     gap: 18px;
     align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,171,240,0.12);
+    box-shadow: 0 6px 30px rgba(0,171,240,0.06);
 }
 .footer-logo {
     width: 64px;
     height: 64px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid rgba(0,171,240,0.12);
-    box-shadow: 0 6px 30px rgba(0,171,240,0.06);
 }
 
 .TitleName{
@@ -110,8 +112,12 @@
 }
 
 @media (max-width: 430px) {
+    .footer-brand {
+        width: 100%;
+    }
+
     .footer-brand .muted {
-        width: 15rem;
-        font-size: 15px;
+        width: 14rem;
+        font-size: 13px;
     }
 }
